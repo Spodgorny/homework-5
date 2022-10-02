@@ -94,10 +94,23 @@ ul, ol {
 
 .nav-item.current {
     color: var(--color-btn-hover);
+    padding-bottom: 0;
 }
 
 .nav-item:focus {
     color: var(--accent-color);
+}
+
+.current::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    background: var(--accent-color);
+    border-radius: 2px;
+    margin-top: 32px;
 }
 
 
@@ -222,7 +235,8 @@ ul, ol {
     overflow: hidden;
 }
 
-.nazv-img-link:hover .nazv-text {
+.nazv-img-link:hover .nazv-text,
+.nazv-img-link:focus .nazv-text {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(-50%);
     opacity: 1;
@@ -329,23 +343,6 @@ ul, ol {
     line-height: 1.71;
 }
 
-.stylep {
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: .03em;
-    color: var(--secondary-text-color);
-    margin-top: 0;
-
-}
-
-.cards-link {
-    display: block;
-}
-
-.cards-link:hover,
-.cards-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 .btn {
     font-family: inherit;
@@ -738,15 +735,58 @@ ul, ol {
     color: var(--container-bg-color);
 }
 
+.stylep {
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: .03em;
+    color: var(--secondary-text-color);
+    margin-top: 0;
+
+}
+
+.cards-link {
+    display: block;
+}
+
+.cards-img-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.cards-img-link:hover,
+.cards-img-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .cards-img {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-/* .cards-img-link:hover {
+.cards-img-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 63px 24px;
+    width: 100%;
+    top: 0;
+    transform: translateY(50%);
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--container-bg-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+}
 
-} */
+.cards-img-link:hover .cards-img-text,
+.cards-img-link:focus .cards-img-text {
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+    opacity: 1;
+}
 
 
 .border {
