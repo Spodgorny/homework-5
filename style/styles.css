@@ -761,22 +761,20 @@ ul, ol {
 }
 
 .cards-link {
-    display: block;
+    transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cards-link:hover {
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.cards-link:hover,
+.cards-link:focus {
+    display: inline-block;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+ 
 .cards-img-hover {
     position: relative;
     overflow: hidden;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.cards-img-link:hover,
-.cards-img-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-img {
@@ -804,10 +802,10 @@ ul, ol {
 
 .cards-img-link:hover .cards-img-text,
 .cards-img-link:focus .cards-img-text {
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0);
     opacity: 1;
-}
+} 
 
 
 .border {
