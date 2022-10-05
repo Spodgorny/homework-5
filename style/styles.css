@@ -724,7 +724,7 @@ ul, ol {
     border-color: transparent;
     cursor: pointer;
     letter-spacing: .03em;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
