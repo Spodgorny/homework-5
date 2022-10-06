@@ -230,13 +230,6 @@ ul, ol {
     overflow: hidden;
 }
 
-.nazv-img-link:hover .nazv-text,
-.nazv-img-link:focus .nazv-text {
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(-50%);
-    opacity: 1;
-}
-
 .nazv-text {
     position: absolute;
     display: flex;
@@ -245,10 +238,13 @@ ul, ol {
     color: var(--container-bg-color);
     width: 100%;
     height: 70px;
-    bottom: -12%;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.14;
+    text-transform: uppercase;
+    bottom: 0;
     background-color: rgba(47, 48, 58, 0.8);
-    transform: translateY(50%);
-    opacity: 0;
 }
 
 
@@ -751,11 +747,11 @@ ul, ol {
 
 .cards-link {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
 }
 
 .cards-link:hover,
 .cards-link:focus {
-    display: inline-block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
